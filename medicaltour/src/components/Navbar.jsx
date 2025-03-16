@@ -30,12 +30,12 @@ const Navbar = () => {
     setIsPatientLoggedIn(false);
   };
 
-  const togglePatientLogin = () => {
-    setIsPatientLoggedIn(true);
-  };
+  // const togglePatientLogin = () => {
+  //   setIsPatientLoggedIn(true);
+  // };
 
   return (
-    <div className="flex justify-between p-5 fixed bg-white w-full ">
+    <div className="flex justify-between p-5 fixed bg-[#ffffff] w-full z-20">
         <Link to="/">
             <div className="text-2xl font-medium">Travel N Cure</div>
         </Link>
@@ -43,12 +43,15 @@ const Navbar = () => {
         <NavigationMenu> 
             <NavigationMenuList>
             <NavigationMenuItem>
-                <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                <NavigationMenuLink>Hospitals</NavigationMenuLink>
-                <NavigationMenuLink>Doctors</NavigationMenuLink>
-                <NavigationMenuLink>Treatments</NavigationMenuLink>
-                </NavigationMenuContent>
+              <NavigationMenuTrigger>Explore</NavigationMenuTrigger>
+              <NavigationMenuContent className="pr-10 h-auto text-md">
+                <Link to="/hospitals">
+                  <NavigationMenuLink>Hospitals</NavigationMenuLink> 
+                </Link>
+                <Link to="/doctors">
+                  <NavigationMenuLink>Doctors</NavigationMenuLink> 
+                </Link>
+              </NavigationMenuContent>
             </NavigationMenuItem>
             {navLinks
               .filter((nav) => !isPatientLoggedIn ? true : 
@@ -78,7 +81,7 @@ const Navbar = () => {
                     {patientName || "Patient"}
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/profile/edit">Edit Profile</Link>
+                    <Link to="/profile/edit">View Profile</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={handleLogout}>
                     Logout
@@ -90,7 +93,7 @@ const Navbar = () => {
         </NavigationMenuList>
         </NavigationMenu>
         </div>
-        <Button onClick={() => togglePatientLogin()}>ToggleLogin</Button>
+        {/* <Button onClick={() => togglePatientLogin()}>ToggleLogin</Button> */}
     </div>
   );
 };

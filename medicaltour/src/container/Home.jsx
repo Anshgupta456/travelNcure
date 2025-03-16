@@ -1,10 +1,16 @@
-import React from "react";
-import landingbg from "../assets/landing.jpg";
+import React from 'react';
+import Hero from './Hero'
+import WhyUs from './whyUs'
+import Contact from '../components/Contact'
+import Dept from '../components/DepartmentTab'
 
 const Home = () => {
   return (
-    <div>
-      <img src={landingbg} alt="background" className="bg-cover"/>
+    <div className="min-h-screen bg-gray-100">
+      <Hero />
+      <WhyUs />
+      <Dept />
+      <Contact />
     </div>
   );
 };

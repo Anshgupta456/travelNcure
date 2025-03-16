@@ -16,10 +16,10 @@ import { Textarea } from "@/components/ui/textarea"
 const EditProfile = () => {
   return (
     <div className="p-30">
-      <Card className="w-[90vh] block mx-auto space-y-5 h-auto">
+      <Card className="w-[60vh] block mx-auto space-y-5 h-auto items-center">
         <CardHeader className="text-lg">
-          <CardTitle>Edit Profile</CardTitle>
-          <CardDescription>Add your medical condition</CardDescription>
+          <CardTitle>View Profile</CardTitle>
+          {/*<CardDescription>Add your medical condition</CardDescription>*/}
         </CardHeader>
         <CardContent className="space-y-2">
           <div>
@@ -34,7 +34,7 @@ const EditProfile = () => {
             <Label className="text-md">E-Mail ID</Label>
             <span style = {{color: "grey"}}>Anshikagupta@gmail.com</span>
           </div>
-          <form>
+          {/* <form>
             <div className="flex flex-col gap-3">
               <div className="grid gap-1">
                 <Label htmlFor="firstname">Medical Department </Label>
@@ -56,21 +56,21 @@ const EditProfile = () => {
                 <Label htmlFor="contact">Briefly describe your medical condition</Label>
                 <Textarea placeholder="Write here..." />
               </div>
-              {/* <div className="grid gap-1">
+              <div className="grid gap-1">
                 <Label htmlFor="password">Password</Label>
                 <Input
                   id="password"
                   type="password"
                   placeholder="Enter Password"
                 />
-              </div> */}
+              </div>
               
             </div>
-          </form>
+          </form> */}
         </CardContent>
-        <CardFooter>
-          <Button className="w-full">Save</Button>
-        </CardFooter>
+        {/* <CardFooter>
+        <Button className="w-full">Save</Button>
+        </CardFooter> */}
       </Card>
     </div>
   );
